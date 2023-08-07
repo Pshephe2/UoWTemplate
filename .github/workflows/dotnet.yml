@@ -24,3 +24,10 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: drop
+        path: |
+          **/bin/*
+    
